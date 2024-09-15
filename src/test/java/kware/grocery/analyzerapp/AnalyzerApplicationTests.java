@@ -1,4 +1,4 @@
-package kware.grocery.analyzer;
+package kware.grocery.analyzerapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

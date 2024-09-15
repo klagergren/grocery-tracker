@@ -1,4 +1,4 @@
-package kware.grocery.analyzer;
+package kware.grocery.analyzerapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
