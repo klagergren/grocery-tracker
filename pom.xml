@@ -22,6 +22,9 @@
     <java.version>17</java.version>
     <lombok.version>1.18.34</lombok.version>
     <jackson.csv.version>2.15.0</jackson.csv.version>
+    <tesseract.version>4.6.0</tesseract.version>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
   </properties>
   <dependencies>
     <dependency>
@@ -37,6 +40,11 @@
       <groupId>com.fasterxml.jackson.dataformat</groupId>
       <artifactId>jackson-dataformat-csv</artifactId>
       <version>${jackson.csv.version}</version> <!-- Use the latest version available -->
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.tess4j</groupId>
+      <artifactId>tess4j</artifactId>
+      <version>${tesseract.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
