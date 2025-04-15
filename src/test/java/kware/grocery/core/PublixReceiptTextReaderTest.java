@@ -20,4 +20,17 @@ class PublixReceiptTextReaderTest {
     assertNotNull(receipt);
   }
 
+//  @Test
+//  void regexTest() {
+//    Pattern pricePattern = Pattern.compile("\\d+[\\.,]\\d+");
+//    String string = "PERDUE CHKN STRPS	10,99 t F";
+//    Matcher matcher = pricePattern.matcher(string);
+//    if (matcher.find()) {
+//      int start = matcher.start();
+//      int end = matcher.end();
+//    }
+//    assertTrue(matcher.find());
+//
+//  }
+
 }
