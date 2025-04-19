@@ -1,4 +1,4 @@
-package kware.grocery.domain;
+package kware.grocery.domain.publix;
 
 import java.util.List;
 import lombok.Data;

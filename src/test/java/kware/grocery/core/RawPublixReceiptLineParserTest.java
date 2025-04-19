@@ -3,7 +3,8 @@ package kware.grocery.core;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
-import kware.grocery.domain.RawPublixReceiptEntry;
+import kware.grocery.domain.publix.RawPublixReceiptEntry;
+import kware.grocery.readers.publix.RawPublixReceiptLineParser;
 import org.junit.jupiter.api.Test;
 
 

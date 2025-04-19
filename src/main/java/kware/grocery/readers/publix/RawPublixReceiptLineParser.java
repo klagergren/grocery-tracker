@@ -1,9 +1,9 @@
-package kware.grocery.core;
+package kware.grocery.readers.publix;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
-import kware.grocery.domain.RawPublixReceiptEntry;
+import kware.grocery.domain.publix.RawPublixReceiptEntry;
 import kware.grocery.util.RegexUtil;
 
 public class RawPublixReceiptLineParser {

@@ -3,7 +3,8 @@ package kware.grocery.core;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.io.IOException;
-import kware.grocery.domain.PublixRawReceipt;
+import kware.grocery.domain.publix.PublixRawReceipt;
+import kware.grocery.readers.publix.PublixReceiptTextReader;
 import org.junit.jupiter.api.Test;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;

@@ -1,4 +1,4 @@
-package kware.grocery.core;
+package kware.grocery.readers.publix;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -9,10 +9,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import kware.grocery.domain.PublixRawReceipt;
-import kware.grocery.domain.PublixReceiptEntry;
+import kware.grocery.domain.publix.PublixRawReceipt;
+import kware.grocery.domain.publix.PublixReceiptEntry;
 import org.springframework.core.io.Resource;
 
+@Deprecated
 public class PublixReceiptTextReader {
 
   private static Pattern pricePattern = Pattern.compile("\\d+[\\.,]\\d+");
