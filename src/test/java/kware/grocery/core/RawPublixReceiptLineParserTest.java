@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.List;
 import kware.grocery.domain.publix.RawPublixReceiptEntry;
 import kware.grocery.readers.publix.RawPublixReceiptLineParser;
+import kware.grocery.util.PublixLineParser;
 import org.junit.jupiter.api.Test;
 
 
@@ -22,7 +23,8 @@ class RawPublixReceiptLineParserTest {
   private static final String line10 = "D/H CARROT CAKE MX 2,69 F";
 
 
-  private final RawPublixReceiptLineParser sut = new RawPublixReceiptLineParser();
+  private final PublixLineParser publixLineParser = new PublixLineParser();
+  private final RawPublixReceiptLineParser sut = new RawPublixReceiptLineParser(publixLineParser);
 
   @Test
   void testParseReceiptEntries() {

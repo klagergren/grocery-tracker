@@ -4,13 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 import kware.grocery.domain.publix.RawPublixReceiptEntry;
-import kware.grocery.util.RegexUtil;
+import kware.grocery.util.PublixLineParser;
+import lombok.AllArgsConstructor;
 
-public class RawPublixReceiptLineParser {
+@AllArgsConstructor
+public class RawPublixReceiptLineParser { //TODO: Rename to raw entry builder?
 
   private static final int NUM_LINES_TO_CONSIDER = 3;
   private static final String PUBLIX_PROMOTION_STRING = "PROMOTION";
   private static final String PUBLIX_SAVING_INFO_STRING = "You Saved";
+
+  private PublixLineParser publixLineParser;
 
   public List<RawPublixReceiptEntry> parseRawReceiptLines(List<String> receiptItemLines) {
 
@@ -67,7 +71,7 @@ public class RawPublixReceiptLineParser {
   }
 
   private boolean lineContainsNoPrice(String line) {
-    return !RegexUtil.containsPrice(line);
+    return !publixLineParser.containsPrice(line);
   }
 
 }

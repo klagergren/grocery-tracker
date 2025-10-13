@@ -16,7 +16,7 @@ import org.springframework.core.io.Resource;
 @Deprecated
 public class PublixReceiptTextReader {
 
-  private static Pattern pricePattern = Pattern.compile("\\d+[\\.,]\\d+");
+  private static final Pattern pricePattern = Pattern.compile("\\d+[\\.,]\\d+");
 
   public PublixRawReceipt readFile(Resource textFileResource) throws IOException {
     File file = textFileResource.getFile();

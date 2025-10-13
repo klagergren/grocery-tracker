@@ -8,5 +8,5 @@ import lombok.Data;
 @Builder
 public class PublixRawReceipt {
 
-  List<String> lineEntries;
+  private List<String> lineEntries;
 }
