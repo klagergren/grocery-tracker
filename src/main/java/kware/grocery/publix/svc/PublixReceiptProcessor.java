@@ -21,16 +21,14 @@ public class PublixReceiptProcessor {
     int indexOfFirstEntry = findFirstEntryLine(rawReceiptLines);
     List<String> receiptHeaderSection = rawReceiptLines.subList(0, indexOfFirstEntry);
     RawHeader rawHeader = RawHeader.builder().headerLines(receiptHeaderSection).build();
+    PublixReceiptHeader header = headerProcessor.process(rawHeader);
+
     List<String> receiptEntrySection = rawReceiptLines.subList(indexOfFirstEntry,
         rawReceiptLines.size());
-
     List<RawPublixReceiptEntry> rawEntries = rawPublixReceiptLineParser.parseRawReceiptLines(
         receiptEntrySection);
-
     List<PublixReceiptEntry> receiptEntries = rawEntries.stream()
         .map(rawPublixEntryProcessor::process).toList();
-
-    PublixReceiptHeader header = headerProcessor.process(rawHeader);
 
     return PublixReceipt.builder().header(header).entries(receiptEntries).build();
   }

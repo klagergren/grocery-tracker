@@ -9,6 +9,7 @@ public class PublixHeaderProcessor {
 
   public PublixReceiptHeader process(RawHeader rawHeader) {
     //TODO: Fix spelling before returning header. Use a dictionary of common store names?
+    //TODO: Parse address?
     String storeName = rawHeader.getHeaderLines().get(0).trim();
     String storeDescription = rawHeader.getHeaderLines().get(1).trim();
 

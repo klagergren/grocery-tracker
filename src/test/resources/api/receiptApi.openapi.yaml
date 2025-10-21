@@ -1,0 +1,65 @@
+openapi: 3.0.4
+info:
+  title: Receipt Api - OpenAPI 3.0
+  description: |-
+    For loading and querying receipts and their data
+
+    Some useful links:
+    - [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)
+    - [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
+  termsOfService: https://swagger.io/terms/
+  contact:
+    email: kalagergren@gmail.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.12
+externalDocs:
+  description: Find out more about Swagger
+  url: https://swagger.io
+servers:
+  - url: https://analyzer.swagger.io/api/v3
+tags:
+  - name: receipt
+    description: Posting and Revising grocery store receipts
+    externalDocs:
+      description: Find out more
+      url: https://swagger.io
+
+paths:
+  /receipt:
+    post:
+      tags:
+        - receipt
+      summary: Post a new receipt
+      description: Post a new receipt
+      operationId: saveReceipt
+      requestBody:
+        description: Post a new receipt
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Receipt'
+        required: true
+      responses:
+        '200':
+          description: Receipt Id
+          content:
+            application/json:
+              schema:
+                type: string
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                type: string
+components:
+  schemas:
+    Receipt:
+      type: object
+      properties:
+        receiptLines:
+          type: array
+          items:
+            format: string
