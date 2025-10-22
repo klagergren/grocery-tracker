@@ -21,7 +21,8 @@ public class RawPublixEntryProcessor {
     }
 
     //First line of a publix receipt entry is always item info. Price may be contained here
-    String itemInfo = rawEntry.getEntryLines().getFirst();
+    String itemInfo = rawEntry.getEntryLines()
+        .get(0); //TODO: Figure out why Git won't let me use getFirst()
     GroceryItem item = itemInfoProcessor.process(itemInfo);
 
     //Second line, if present, will either be promotion info or "you saved" info... Will be implemented later
