@@ -45,11 +45,11 @@
       <artifactId>lombok</artifactId>
       <version>${lombok.version}</version>
     </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.dataformat</groupId>
-      <artifactId>jackson-dataformat-csv</artifactId>
-      <version>${jackson.csv.version}</version> <!-- Use the latest version available -->
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>com.fasterxml.jackson.dataformat</groupId>-->
+<!--      <artifactId>jackson-dataformat-csv</artifactId>-->
+<!--      <version>${jackson.csv.version}</version> &lt;!&ndash; Use the latest version available &ndash;&gt;-->
+<!--    </dependency>-->
     <dependency>
       <groupId>net.sourceforge.tess4j</groupId>
       <artifactId>tess4j</artifactId>
